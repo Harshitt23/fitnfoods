@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitsnFoods Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fce7f3, #fef3c7);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #be185d;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #6b7280;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #be185d;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .test-image {
+            max-width: 200px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍰👗 FitsnFoods</h1>
+        <p>Test Page - If you can see this, static deployment is working!</p>
+        
+        <div>
+            <a href="/" class="btn">🏠 Home</a>
+            <a href="/fashion" class="btn">👗 Fashion</a>
+            <a href="/food" class="btn">🍰 Food</a>
+        </div>
+        
+        <h3>Testing Images:</h3>
+        <img src="public/images/burger.jpg" alt="Burger" class="test-image" onerror="this.style.display='none'">
+        <img src="public/images/cupcake.jpg" alt="Cupcake" class="test-image" onerror="this.style.display='none'">
+        
+        <p><small>If images don't load, there might be a path issue.</small></p>
+    </div>
+</body>
+</html>
