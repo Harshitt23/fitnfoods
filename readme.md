@@ -184,7 +184,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/YourGitHub)
+- **Harshitt23** - *Initial work* - (https://github.com/Harshitt23/fitnfoods.git)
 
 ## 🙏 Acknowledgments
 
