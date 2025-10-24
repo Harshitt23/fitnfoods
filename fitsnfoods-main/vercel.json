@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "views/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/fashion",
+      "dest": "/views/fashion.html"
+    },
+    {
+      "src": "/food",
+      "dest": "/views/food.html"
+    },
+    {
+      "src": "/upload",
+      "dest": "/views/upload.html"
+    },
+    {
+      "src": "/game",
+      "dest": "/views/game.html"
+    },
+    {
+      "src": "/photobooth",
+      "dest": "/views/photobooth.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

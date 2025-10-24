@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitsnFoods - Static Version</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #fce7f3, #fef3c7);
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 1rem;
+      color: #be185d;
+    }
+    .btn-glass {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: #be185d;
+      padding: 0.85rem 1.8rem;
+      border-radius: 2.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      margin: 0.5rem;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-glass:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>FitsnFoods</h1>
+      <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem;">
+        Ancient Style, Modern Taste - Your dreamy zone of fashion and food
+      </p>
+      <div>
+        <a href="/fashion" class="btn-glass">👗 Explore Fashion</a>
+        <a href="/food" class="btn-glass">🍰 Explore Food</a>
+        <a href="/upload" class="btn-glass">📸 Upload Post</a>
+        <a href="/game" class="btn-glass">🎮 Play Game</a>
+        <a href="/photobooth" class="btn-glass">📷 Photobooth</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
