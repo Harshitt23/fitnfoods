@@ -1,21 +1,25 @@
 {
   "name": "fitsnfoods",
   "version": "1.0.0",
-  "description": "A beautiful web application that combines fashion inspiration and food exploration",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "build": "echo 'Static site - no build required'",
-    "start": "echo 'Static site - serve with any web server'"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": ["fashion", "food", "static", "website"],
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YourUsername/fitsnfoods.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Rishika2324/fitsnfoods/issues"
   },
-  "homepage": "https://github.com/Rishika2324/fitsnfoods#readme"
+  "homepage": "https://github.com/Rishika2324/fitsnfoods#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.1"
+  }
 }
