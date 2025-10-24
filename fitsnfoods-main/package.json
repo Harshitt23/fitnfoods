@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YourUsername/fitsnfoods.git"
+    "url": "git+https://github.com/Rishika2324/fitsnfoods.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["fashion", "food", "gallery", "website"],
+  "author": "Rishika2324",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Rishika2324/fitsnfoods/issues"
   },
   "homepage": "https://github.com/Rishika2324/fitsnfoods#readme",
-  "description": "",
+  "description": "A beautiful web application that combines fashion inspiration and food exploration",
   "dependencies": {
     "express": "^5.1.0",
     "multer": "^2.0.1"
