@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Food - FitsnFoods</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    .masonry {
+      column-count: 1;
+    }
+    @media (min-width: 640px) {
+      .masonry { column-count: 2; }
+    }
+    @media (min-width: 768px) {
+      .masonry { column-count: 3; }
+    }
+    @media (min-width: 1024px) {
+      .masonry { column-count: 4; }
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .masonry-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 font-sans text-gray-800">
+
+  <header class="p-6 text-center bg-yellow-200 shadow-md sticky top-0 z-10">
+    <h1 class="text-4xl font-extrabold text-yellow-800">🍱 Explore Food</h1>
+    <p class="text-md text-yellow-700 mt-1">Yummy bites, snacks, brunch, and everything delicious ✨</p>
+    <a href="index.html" class="inline-block mt-4 px-4 py-2 text-sm font-semibold text-white bg-yellow-500 rounded-full hover:bg-yellow-600 transition duration-300">🏠 Back to Home</a>
+  </header>
+
+  <!-- Masonry Pinterest Grid -->
+  <main class="p-6 masonry">
+
+    <!-- Repeat this block for each food card -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/burger.jpg" alt="Burger">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Cheesy Burger</h2>
+        <p class="text-sm text-gray-500 mt-1">Juicy & loaded 🍔</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/cupcake.jpg" alt="Cupcake">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Cute Cupcake</h2>
+        <p class="text-sm text-gray-500 mt-1">Sweet & soft 🧁</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/pasta.jpg" alt="Pasta">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Creamy Pasta</h2>
+        <p class="text-sm text-gray-500 mt-1">Italian vibes 🇮🇹</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/milkshake.jpg" alt="Milkshake">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Strawberry Shake</h2>
+        <p class="text-sm text-gray-500 mt-1">Chilled & pretty 🍓</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/pizza.jpg" alt="Pizza">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Loaded Pizza</h2>
+        <p class="text-sm text-gray-500 mt-1">Melty & hot 🍕</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl overflow-hidden shadow-md masonry-item animate__animated animate__fadeInUp">
+      <img src="images/brunch.jpg" alt="Brunch">
+      <div class="p-3">
+        <h2 class="font-semibold text-lg text-yellow-700">Sunday Brunch</h2>
+        <p class="text-sm text-gray-500 mt-1">Aesthetic plate ☕</p>
+      </div>
+    </div>
+
+    <!-- Add more cards by duplicating and changing image & title -->
+
+  </main>
+</body>
+</html>
