@@ -181,8 +181,8 @@ This project is open source and available under the [ISC License](LICENSE).
 
 ## 👤 Author
 
-**Rishika2324**
-- GitHub: (https://github.com/Harshitt23)
+**Harshitt23**
+- GitHub: [@Harshitt23](https://github.com/Harshitt23)
 
 ## 🙏 Acknowledgments
 
