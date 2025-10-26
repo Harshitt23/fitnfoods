@@ -60,13 +60,16 @@ app.post('/upload', upload.single('media'), (req, res) => {
   res.send('Upload successful! (File stored temporarily in /tmp)');
 });
 
-// --- REMOVE THE SERVER START ---
-// Vercel handles starting the server, so we remove app.listen.
-/*
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-*/
+// --- HANDLE BOTH LOCAL AND VERCEL ---
+// Vercel handles starting the server, but we need it for local development
+const PORT = process.env.PORT || 5000;
+
+// Start server in development or if not on Vercel
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
 
 // --- EXPORT THE APP FOR VERCEL ---
 module.exports = app;
