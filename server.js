@@ -3,10 +3,11 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
+// Vercel provides its own port, so we don't need to set it to 5000.
 
 // Middleware to serve static files
 app.use(express.static('public')); // serves /public
+app.use('/public', express.static('public')); // also serve as /public for Vercel
 app.use('/views', express.static(path.join(__dirname, 'views'))); // serves /views
 
 app.use(express.urlencoded({ extended: true }));
@@ -37,10 +38,13 @@ app.get('/photobooth', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'photobooth.html'));
 });
 
-// Multer setup (to save uploaded files in public/uploads)
+// --- CRITICAL CHANGE FOR VERCEL ---
+// Vercel's filesystem is read-only, except for the /tmp directory.
+// You cannot save files to 'public/uploads/'.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'public/uploads/');
+    // We use the /tmp directory for temporary storage
+    cb(null, '/tmp/');
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + '-' + file.originalname);
@@ -51,11 +55,18 @@ const upload = multer({ storage });
 
 // Upload route
 app.post('/upload', upload.single('media'), (req, res) => {
-  console.log('File uploaded:', req.file);
-  res.send('Upload successful!');
+  console.log('File uploaded to /tmp:', req.file);
+  // Note: This file is temporary and will be deleted when the function instance is recycled.
+  res.send('Upload successful! (File stored temporarily in /tmp)');
 });
 
-// Start the server
+// --- REMOVE THE SERVER START ---
+// Vercel handles starting the server, so we remove app.listen.
+/*
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+*/
+
+// --- EXPORT THE APP FOR VERCEL ---
+module.exports = app;
