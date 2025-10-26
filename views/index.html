@@ -158,9 +158,10 @@
 <body>
 
   <!-- Background Video -->
-  <video autoplay muted loop class="video-bg">
-   <source src="/videos/bg-video.mp4" type="video/mp4" />
-
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="./videos/bg-video.mp4" type="video/mp4" />
+    <source src="/public/videos/bg-video.mp4" type="video/mp4" />
+    <source src="videos/bg-video.mp4" type="video/mp4" />
   </video>
 
   <!-- Hero Content -->
