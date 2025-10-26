@@ -6,8 +6,8 @@ const app = express();
 // Vercel provides its own port, so we don't need to set it to 5000.
 
 // Middleware to serve static files
-app.use(express.static('public')); // serves /public
-app.use('/public', express.static('public')); // also serve as /public for Vercel
+app.use(express.static(path.join(__dirname, 'public'))); // serves /public
+app.use('/public', express.static(path.join(__dirname, 'public'))); // also serve as /public for Vercel
 app.use('/views', express.static(path.join(__dirname, 'views'))); // serves /views
 
 app.use(express.urlencoded({ extended: true }));

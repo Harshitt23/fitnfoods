@@ -11,6 +11,11 @@
       "handle": "filesystem"
     },
     {
+      "src": "/upload",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
       "src": "/(.*)",
       "dest": "/server.js"
     }
